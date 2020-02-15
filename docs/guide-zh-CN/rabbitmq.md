@@ -43,7 +43,7 @@ public function rbmqTopic()
 ## 消费者(Consumer)
 框架封装了通过控制台模式进行消费的使用
 ```php
-php artisan rabbitmq:[--type] 
+php artisan rabbitmq:consume [--type] 
 ```
 ```php
 public function handle()

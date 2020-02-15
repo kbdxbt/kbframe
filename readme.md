@@ -18,6 +18,17 @@
 ![image](docs/images/system.jpg)
 
 ### 安装
+### 环境要求
+- PHP >= 7.2
+- PHP cURL 扩展
+- PHP OpenSSL 扩展
+- PHP fileinfo 扩展 
+- PHP mongodb 扩展 >= 1.6
+- PHP ampq 扩展
+- Mysql >= 5.7
+- Apache 或 Nginx
+- Composer (用于管理第三方扩展包)
+- 安装CA证书 (windows开发环境下)
 ```php
 $ cp .env.example .env //复制env文件，配置好相应的配置信息，数据库必须配置
 $ composer update //composer install 也行
@@ -139,12 +150,8 @@ Laravel内置了Mysql数据库读写分离，支持多主多从，同一请求�
 ### Elasticsearch使用
 框架封装了Mysql全量同步数据到Elasticsearch的示例，通过控制台模式进行同步。支持类似Query大部分的增删改查等基础方法使用。
 
-### 数据字典
-框架辅助分支会根据Mysql数据库生成相应的数据字典(PDF版，HTML版，MD版)，方便查询字段信息。[数据字典](docs/guide-zh-CN/data-dictionary.md) 
-
 ### Docker
 搭建基础公用环境包，方便使用，支持业务不断的提升而需要一些软件的支持但由于本身不懂或耗时导致不方便安装升级的一种解决方案，同时方便结合k8s集群管理，提供了一套docker解决方案，这里推荐使用docker-compose来管理，执行项目。<br/>
-[来源]：https://github.com/jianyan74/dockerfiles
 
 ## 后续计划
 目前1.x版本将会是一个单模块版本，2.x版本是"多模块+插件"模式，支持模块独立部署，插件自由扩展移植，优化海量数据处理解决方案，该版本预计2020年中旬会发布更新。后续未来计划可能会用Go+协程的模式编写全新的高并发框架。
