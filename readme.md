@@ -6,6 +6,8 @@
 这是一款基于Laravel框架开发的现代化二次开发框架，是高性能，高效率，高质量的企业级开发框架，具有驱动领域，敏捷开发，轻易上手，高内聚低耦合，开箱即用等特点。<br/>
 1.x版本目前正在成长中，目的是为了简化更多企业开发，减少重复制造轮子，让开发变得更加简单。
 
+- [Docker安装kbframe](https://github.com/kbdxbt/kbframe-assist) 
+- [kbframe辅助模块](https://github.com/kbdxbt/kbframe-docker)
 ### 开始之前
 - 具备 PHP 基础知识和面向对象思维
 - 具备 Laravel 基础开发知识
@@ -31,7 +33,7 @@
 - 安装CA证书 (windows开发环境下)
 ```php
 $ cp .env.example .env //复制env文件，配置好相应的配置信息，数据库必须配置
-$ composer update //composer install 也行
+$ composer install 
 $ php artisan app:init // 执行应用初始化
 ```
 配置好伪静态后就可以访问了，其中nginx需要过滤掉index.php<br/>

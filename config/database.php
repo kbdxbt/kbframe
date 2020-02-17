@@ -45,26 +45,22 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
+//            'write' => [
+//                'host' => env('DB_HOST_WRITE', '127.0.0.1'),
+//                'port' => env('DB_PORT_WRITE', '3306'),
+//                'username' => env('DB_USERNAME_WRITE', 'root'),
+//                'password' => env('DB_PASSWORD_WRITE', 'root'),
+//                'database' => env('DB_DATABASE_WRITE', 'kbframe'),
+//            ],
 //            'read' => [
 //                // array_rand 随机策略
 //                [
 //                    'host' => env('DB_HOST_READ', '127.0.0.1'),
+//                    'port' => env('DB_PORT_READ', '3306'),
 //                    'username' => env('DB_USERNAME_READ', 'root'),
 //                    'password' => env('DB_PASSWORD_READ', 'root'),
-//                    'database' => env('DB_DATABASE_READ', 'db_read'),
-//                ],
-//                [
-//                    'host' => env('DB_HOST_READ', '127.0.0.1'),
-//                    'username' => env('DB_USERNAME_READ', 'root'),
-//                    'password' => env('DB_PASSWORD_READ', 'root'),
-//                    'database' => env('DB_DATABASE_READ', 'db_slave'),
+//                    'database' => env('DB_DATABASE_READ', 'kbframe'),
 //                ]
-//            ],
-//            'write' => [
-//                'host' => env('DB_HOST_WRITE', '127.0.0.1'),
-//                'username' => env('DB_USERNAME_WRITE', 'root'),
-//                'password' => env('DB_PASSWORD_WRITE', 'root'),
-//                'database' => env('DB_DATABASE_WRITE', 'db_write'),
 //            ],
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
