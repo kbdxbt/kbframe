@@ -2,53 +2,44 @@
 
 namespace App\Models;
 
-use App\Common\Enums\GenderEnum;
-use App\Common\Enums\StatusEnum;
-use Illuminate\Notifications\Notifiable;
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
-/**
- * Class User 用户模型类
- * @package App\Models
- * @author kbdxbt <1194174530@qq.com>
- */
 class User extends Authenticatable
 {
-    use HasRoles,Notifiable;
-
-    public $timestamps = true;
-
-    protected $guard_name = 'backend';
-
-    protected $guarded = ['id'];
-
-    protected $table = 'users';
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The attributes that are mass assignable.
      *
-     * @var array
+     * @var array<int, string>
      */
-    protected $hidden = [
-        'password', 'remember_token',
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
     ];
 
-//    protected $appends = ['gender_value', 'status_value'];
-
-    /*
-     * 性别
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
      */
-    public function getGenderValueAttribute($value)
-    {
-        return GenderEnum::getMap()[$this->attributes['gender']];
-    }
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
 
-    /*
-     * 状态
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
      */
-    public function getStatusValueAttribute($value)
-    {
-        return StatusEnum::getMap()[$this->attributes['status']];
-    }
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
+    ];
 }

@@ -45,23 +45,6 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-//            'write' => [
-//                'host' => env('DB_HOST_WRITE', '127.0.0.1'),
-//                'port' => env('DB_PORT_WRITE', '3306'),
-//                'username' => env('DB_USERNAME_WRITE', 'root'),
-//                'password' => env('DB_PASSWORD_WRITE', 'root'),
-//                'database' => env('DB_DATABASE_WRITE', 'kbframe'),
-//            ],
-//            'read' => [
-//                // array_rand 随机策略
-//                [
-//                    'host' => env('DB_HOST_READ', '127.0.0.1'),
-//                    'port' => env('DB_PORT_READ', '3306'),
-//                    'username' => env('DB_USERNAME_READ', 'root'),
-//                    'password' => env('DB_PASSWORD_READ', 'root'),
-//                    'database' => env('DB_DATABASE_READ', 'kbframe'),
-//                ]
-//            ],
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
@@ -73,7 +56,7 @@ return [
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
-            'strict' => true, // 同一个请求生命周期中，读操作也从写数据库读取，因为写数据库始终是最新数据
+            'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
@@ -91,7 +74,7 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
-            'schema' => 'public',
+            'search_path' => 'public',
             'sslmode' => 'prefer',
         ],
 
@@ -106,18 +89,10 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
+            // 'encrypt' => env('DB_ENCRYPT', 'yes'),
+            // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
-        /* 日志库 */
-        'mongodb' => [
-            'driver'   => 'mongodb',
-            'host'     => env('MONGODB_LOG_HOST', '127.0.0.1'),
-            'port'     => env('MONGODB_LOG_PORT', 27017),
-            'database' => env('MONGODB_LOG_DATABASE'),
-            'username' => env('MONGODB_LOG_USERNAME'),
-            'password' => env('MONGODB_LOG_PASSWORD'),
-            'options'  => []
-        ],
     ],
 
     /*
@@ -146,27 +121,29 @@ return [
 
     'redis' => [
 
-        'client' => env('REDIS_CLIENT', 'predis'),
+        'client' => env('REDIS_CLIENT', 'phpredis'),
 
         'options' => [
-            'cluster' => env('REDIS_CLUSTER', 'predis'),
+            'cluster' => env('REDIS_CLUSTER', 'redis'),
             'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
         ],
 
         'default' => [
             'url' => env('REDIS_URL'),
             'host' => env('REDIS_HOST', '127.0.0.1'),
-            'password' => env('REDIS_PASSWORD', null),
-            'port' => env('REDIS_PORT', 6379),
-            'database' => env('REDIS_DB', 0),
+            'username' => env('REDIS_USERNAME'),
+            'password' => env('REDIS_PASSWORD'),
+            'port' => env('REDIS_PORT', '6379'),
+            'database' => env('REDIS_DB', '0'),
         ],
 
         'cache' => [
             'url' => env('REDIS_URL'),
             'host' => env('REDIS_HOST', '127.0.0.1'),
-            'password' => env('REDIS_PASSWORD', null),
-            'port' => env('REDIS_PORT', 6379),
-            'database' => env('REDIS_CACHE_DB', 1),
+            'username' => env('REDIS_USERNAME'),
+            'password' => env('REDIS_PASSWORD'),
+            'port' => env('REDIS_PORT', '6379'),
+            'database' => env('REDIS_CACHE_DB', '1'),
         ],
 
     ],
