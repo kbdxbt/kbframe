@@ -2,21 +2,16 @@
 
 namespace App\Exceptions;
 
+use Guanguans\LaravelExceptionNotify\Facades\ExceptionNotify;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Validation\ValidationException;
+use Jiannei\Response\Laravel\Support\Traits\ExceptionTrait;
 use Throwable;
 
 class Handler extends ExceptionHandler
 {
-    /**
-     * The list of the inputs that are never flashed to the session on validation exceptions.
-     *
-     * @var array<int, string>
-     */
-    protected $dontFlash = [
-        'current_password',
-        'password',
-        'password_confirmation',
-    ];
+    use ExceptionTrait;
 
     /**
      * Register the exception handling callbacks for the application.
@@ -24,7 +19,23 @@ class Handler extends ExceptionHandler
     public function register(): void
     {
         $this->reportable(function (Throwable $e) {
-            //
+            ExceptionNotify::onChannel()->report($e);
         });
+    }
+
+    public function report(Throwable $e)
+    {
+        parent::report($e);
+    }
+
+    public function render($request, Throwable $e)
+    {
+        if ($e instanceof ValidationException) {
+            return $this->invalidJson($request, $e);
+        } elseif ($e instanceof AuthenticationException) {
+            return $this->unauthenticated($request, $e);
+        }
+
+        return $this->prepareJsonResponse($request, $e);
     }
 }

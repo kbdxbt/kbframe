@@ -1,0 +1,52 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "blank_line_before_statement": {
+            "statements": [
+                "break",
+                "case",
+                "continue",
+                "declare",
+                "default",
+                "exit",
+                "goto",
+                "include",
+                "include_once",
+                "phpdoc",
+                "require",
+                "require_once",
+                "return",
+                "switch",
+                "throw",
+                "try",
+                "yield",
+                "yield_from"
+            ]
+        },
+        "comment_to_phpdoc": {
+            "ignored_tags": []
+        },
+        "increment_style": {
+            "style": "pre"
+        }
+    },
+    "exclude": [
+        ".github",
+        ".scribe",
+        "docs",
+        "public",
+        "storage",
+        "vendor",
+        "node_modules"
+    ],
+    "notName": [
+        "_ide_helper_actions.php",
+        "_ide_helper_models.php",
+        "_ide_helper.php",
+        ".phpstorm.meta.php",
+        "*.blade.php"
+    ],
+    "notPath": [
+        "xxx.php"
+    ]
+}

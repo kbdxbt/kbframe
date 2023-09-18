@@ -9,6 +9,8 @@
 .env.backup
 .env.production
 .phpunit.result.cache
+.php-cs-fixer.cache
+cghooks.lock
 Homestead.json
 Homestead.yaml
 auth.json
