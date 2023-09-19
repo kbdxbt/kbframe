@@ -52,7 +52,7 @@ return [
 
     // Set the structure of the response data
     'format' => [
-        Modules\Common\Support\ResponseFormat::class,
+        Modules\Core\Support\ResponseFormat::class,
         [
             'status' => ['alias' => 'status', 'show' => true],
             'code' => ['alias' => 'code', 'show' => true],

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7e67a2bada35c26d70856747d75204d",
+    "content-hash": "add5965c57e30fc39df3171739d247ce",
     "packages": [
         {
             "name": "brick/math",
@@ -421,48 +421,54 @@
         },
         {
             "name": "guanguans/laravel-exception-notify",
-            "version": "3.4.2",
+            "version": "v2.16.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/guanguans/laravel-exception-notify/3.4.2/guanguans-laravel-exception-notify-3.4.2.zip",
-                "reference": "c54ca21da9484a361e7d2c4f5bc755e96b3dee6c",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/guanguans/laravel-exception-notify/v2.16.0/guanguans-laravel-exception-notify-v2.16.0.zip",
+                "reference": "7a48ab716f5baa8c8fb51b14ea9cb846beb66da2",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guanguans/notify": "^1.26",
-                "illuminate/contracts": "^7.0 || ^8.0 || ^9.0 || ^10.0",
-                "illuminate/support": "^7.0 || ^8.0 || ^9.0 || ^10.0",
-                "php": ">=7.4"
+                "guanguans/notify": "^1.25",
+                "illuminate/bus": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "illuminate/contracts": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "illuminate/events": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "illuminate/http": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "illuminate/log": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "illuminate/queue": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "php": ">=7.2",
+                "symfony/cache": "^5.4 || ^6.0",
+                "symfony/rate-limiter": "^5.4 || ^6.0"
             },
             "require-dev": {
                 "brainmaestro/composer-git-hooks": "^2.8 || ^3.0",
-                "ergebnis/composer-normalize": "^2.28",
-                "friendsofphp/php-cs-fixer": "^3.14",
-                "guanguans/ai-commit": "^1.8",
-                "guanguans/monorepo-builder-worker": "^1.2",
-                "kubawerlos/php-cs-fixer-custom-fixers": "^3.13",
-                "laravel/lumen-framework": "^7.0 || ^8.0 || ^9.0 || ^10.0",
-                "mockery/mockery": "^1.6",
-                "orchestra/testbench": "^5.0 || ^6.0 || ^7.0 || ^8.0",
-                "pestphp/pest": "^1.23 || ^2.0",
-                "pestphp/pest-plugin-faker": "^1.0 || ^2.0",
-                "pestphp/pest-plugin-laravel": "^1.2 || ^2.0",
-                "phpstan/extension-installer": "^1.3",
-                "phpstan/phpstan": "^1.10",
+                "dms/phpunit-arraysubset-asserts": "^0.4.0",
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "jetbrains/phpstorm-attributes": "^1.0",
+                "johnkary/phpunit-speedtrap": "^4.0",
+                "mockery/mockery": "^1.3",
+                "nunomaduro/collision": "^4.3 || ^5.0 || ^6.0 || ^7.0",
+                "nunomaduro/larastan": "^1.0 || ^2.0",
+                "nyholm/nsa": "^1.3",
+                "orchestra/testbench": "^5.20 || ^6.0 || ^7.0",
+                "php-mock/php-mock-phpunit": "^2.6",
+                "phpbench/phpbench": "^1.1",
+                "phpstan/extension-installer": "^1.2",
+                "phpstan/phpstan": "^1.9",
                 "phpstan/phpstan-deprecation-rules": "^1.1",
-                "rector/rector": "^0.18",
-                "vimeo/psalm": "^5.15"
+                "phpstan/phpstan-phpunit": "^1.3",
+                "phpunit/phpunit": "^8.5 || ^9.5",
+                "rector/rector": "^0.15.7 || ^0.17.0",
+                "spatie/phpunit-snapshot-assertions": "^3.0 || ^4.2",
+                "symfony/var-dumper": "^5.4 || ^6.0",
+                "vimeo/psalm": "^4.30 || ^5.4"
             },
             "type": "library",
             "extra": {
-                "bamarni-bin": {
-                    "bin-links": true,
-                    "forward-command": true,
-                    "target-directory": "vendor-bin"
-                },
                 "branch-alias": {
-                    "dev-main": "3.x-dev"
+                    "dev-main": "2.x-dev"
                 },
                 "hooks": {
                     "post-merge": [
@@ -474,6 +480,7 @@
                 },
                 "laravel": {
                     "aliases": {
+                        "ExceptionNotifier": "Guanguans\\LaravelExceptionNotify\\Facades\\ExceptionNotify",
                         "ExceptionNotify": "Guanguans\\LaravelExceptionNotify\\Facades\\ExceptionNotify"
                     },
                     "providers": [
@@ -500,7 +507,7 @@
                     "role": "developer"
                 }
             ],
-            "description": "Exception monitoring alarm notification in Laravel(Bark、Chanify、DingTalk、Discord、FeiShu、Mail、PushDeer、QQ Channel Bot、ServerChan、Slack、Telegram、WeWork、XiZhi).",
+            "description": "Laravel 中异常监控报警通知(Bark、Chanify、钉钉群机器人、Discord、飞书群机器人、邮件、PushDeer、QQ 频道机器人、Server 酱、Slack、Telegram、企业微信群机器人、息知)。",
             "homepage": "https://github.com/guanguans/laravel-exception-notify",
             "keywords": [
                 "Bark",
@@ -537,7 +544,7 @@
                 "飞书",
                 "飞书群机器人"
             ],
-            "time": "2023-08-29T07:11:18+00:00"
+            "time": "2023-06-07T02:12:50+00:00"
         },
         {
             "name": "guanguans/notify",
@@ -2283,6 +2290,46 @@
             "time": "2023-02-25T19:38:58+00:00"
         },
         {
+            "name": "psr/cache",
+            "version": "3.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/cache/3.0.0/psr-cache-3.0.0.zip",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "time": "2021-02-03T23:26:27+00:00"
+        },
+        {
             "name": "psr/clock",
             "version": "1.0.0",
             "dist": {
@@ -2869,6 +2916,132 @@
                 "uuid"
             ],
             "time": "2023-04-15T23:01:58+00:00"
+        },
+        {
+            "name": "symfony/cache",
+            "version": "v6.3.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/cache/v6.3.4/symfony-cache-v6.3.4.zip",
+                "reference": "e60d00b4f633efa4c1ef54e77c12762d9073e7b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/cache": "^2.0|^3.0",
+                "psr/log": "^1.1|^2|^3",
+                "symfony/cache-contracts": "^2.5|^3",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/var-exporter": "^6.2.10"
+            },
+            "conflict": {
+                "doctrine/dbal": "<2.13.1",
+                "symfony/dependency-injection": "<5.4",
+                "symfony/http-kernel": "<5.4",
+                "symfony/var-dumper": "<5.4"
+            },
+            "provide": {
+                "psr/cache-implementation": "2.0|3.0",
+                "psr/simple-cache-implementation": "1.0|2.0|3.0",
+                "symfony/cache-implementation": "1.1|2.0|3.0"
+            },
+            "require-dev": {
+                "cache/integration-tests": "dev-master",
+                "doctrine/dbal": "^2.13.1|^3.0",
+                "predis/predis": "^1.1|^2.0",
+                "psr/simple-cache": "^1.0|^2.0|^3.0",
+                "symfony/config": "^5.4|^6.0",
+                "symfony/dependency-injection": "^5.4|^6.0",
+                "symfony/filesystem": "^5.4|^6.0",
+                "symfony/http-kernel": "^5.4|^6.0",
+                "symfony/messenger": "^5.4|^6.0",
+                "symfony/var-dumper": "^5.4|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Cache\\": ""
+                },
+                "classmap": [
+                    "Traits/ValueWrapper.php"
+                ],
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides extended PSR-6, PSR-16 (and tags) implementations",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "caching",
+                "psr6"
+            ],
+            "time": "2023-08-05T09:10:27+00:00"
+        },
+        {
+            "name": "symfony/cache-contracts",
+            "version": "v3.3.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/cache-contracts/v3.3.0/symfony-cache-contracts-v3.3.0.zip",
+                "reference": "ad945640ccc0ae6e208bcea7d7de4b39b569896b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/cache": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.4-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Cache\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to caching",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2023-05-23T14:45:45+00:00"
         },
         {
             "name": "symfony/console",
@@ -4101,6 +4274,53 @@
             "time": "2023-08-07T10:39:22+00:00"
         },
         {
+            "name": "symfony/rate-limiter",
+            "version": "v6.3.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/rate-limiter/v6.3.2/symfony-rate-limiter-v6.3.2.zip",
+                "reference": "5223387e4017f26c8c61c46d8e39c11fe4d504b7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/options-resolver": "^5.4|^6.0"
+            },
+            "require-dev": {
+                "psr/cache": "^1.0|^2.0|^3.0",
+                "symfony/lock": "^5.4|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\RateLimiter\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wouter de Jong",
+                    "email": "wouter@wouterj.nl"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides a Token Bucket implementation to rate limit input and output in your application",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "limiter",
+                "rate-limiter"
+            ],
+            "time": "2023-07-13T14:29:38+00:00"
+        },
+        {
             "name": "symfony/routing",
             "version": "v6.3.3",
             "dist": {
@@ -4520,6 +4740,57 @@
                 "dump"
             ],
             "time": "2023-08-24T14:51:05+00:00"
+        },
+        {
+            "name": "symfony/var-exporter",
+            "version": "v6.3.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/var-exporter/v6.3.4/symfony-var-exporter-v6.3.4.zip",
+                "reference": "df1f8aac5751871b83d30bf3e2c355770f8f0691",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "symfony/var-dumper": "^5.4|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\VarExporter\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Allows exporting any serializable PHP data structure to plain PHP code",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "clone",
+                "construct",
+                "export",
+                "hydrate",
+                "instantiate",
+                "lazy-loading",
+                "proxy",
+                "serialize"
+            ],
+            "time": "2023-08-16T18:14:47+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7574,7 +7845,6 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.1",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-pdo": "*"
