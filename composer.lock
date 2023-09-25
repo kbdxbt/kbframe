@@ -4,8 +4,75 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "add5965c57e30fc39df3171739d247ce",
+    "content-hash": "2179b9bcdd372c4ae83ea9b51104f632",
     "packages": [
+        {
+            "name": "beberlei/assert",
+            "version": "v3.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beberlei/assert.git",
+                "reference": "cb70015c04be1baee6f5f5c953703347c0ac1655"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/cb70015c04be1baee6f5f5c953703347c0ac1655",
+                "reference": "cb70015c04be1baee6f5f5c953703347c0ac1655",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-simplexml": "*",
+                "php": "^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "*",
+                "phpstan/phpstan": "*",
+                "phpunit/phpunit": ">=6.0.0",
+                "yoast/phpunit-polyfills": "^0.1.0"
+            },
+            "suggest": {
+                "ext-intl": "Needed to allow Assertion::count(), Assertion::isCountable(), Assertion::minCount(), and Assertion::maxCount() to operate on ResourceBundles"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/Assert/functions.php"
+                ],
+                "psr-4": {
+                    "Assert\\": "lib/Assert"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Richard Quadling",
+                    "email": "rquadling@gmail.com",
+                    "role": "Collaborator"
+                }
+            ],
+            "description": "Thin assertion library for input validation in business models.",
+            "keywords": [
+                "assert",
+                "assertion",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/beberlei/assert/issues",
+                "source": "https://github.com/beberlei/assert/tree/v3.3.2"
+            },
+            "time": "2021-12-16T21:41:27+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -422,9 +489,14 @@
         {
             "name": "guanguans/laravel-exception-notify",
             "version": "v2.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guanguans/laravel-exception-notify.git",
+                "reference": "7a48ab716f5baa8c8fb51b14ea9cb846beb66da2"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/guanguans/laravel-exception-notify/v2.16.0/guanguans-laravel-exception-notify-v2.16.0.zip",
+                "url": "https://api.github.com/repos/guanguans/laravel-exception-notify/zipball/7a48ab716f5baa8c8fb51b14ea9cb846beb66da2",
                 "reference": "7a48ab716f5baa8c8fb51b14ea9cb846beb66da2",
                 "shasum": ""
             },
@@ -496,6 +568,7 @@
                     "Guanguans\\LaravelExceptionNotify\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -544,14 +617,29 @@
                 "飞书",
                 "飞书群机器人"
             ],
+            "support": {
+                "issues": "https://github.com/guanguans/laravel-exception-notify/issues",
+                "source": "https://github.com/guanguans/laravel-exception-notify"
+            },
+            "funding": [
+                {
+                    "url": "https://www.guanguans.cn/images/wechat.jpeg",
+                    "type": "wechat"
+                }
+            ],
             "time": "2023-06-07T02:12:50+00:00"
         },
         {
             "name": "guanguans/notify",
             "version": "1.26.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guanguans/notify.git",
+                "reference": "f9432f42b7486178ec4a46232561a6e6b6e253c3"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/guanguans/notify/1.26.0/guanguans-notify-1.26.0.zip",
+                "url": "https://api.github.com/repos/guanguans/notify/zipball/f9432f42b7486178ec4a46232561a6e6b6e253c3",
                 "reference": "f9432f42b7486178ec4a46232561a6e6b6e253c3",
                 "shasum": ""
             },
@@ -606,6 +694,7 @@
                     "Guanguans\\Notify\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -670,6 +759,16 @@
                 "钉钉群机器人",
                 "飞书",
                 "飞书群机器人"
+            ],
+            "support": {
+                "issues": "https://github.com/guanguans/notify/issues",
+                "source": "https://github.com/guanguans/notify"
+            },
+            "funding": [
+                {
+                    "url": "https://www.guanguans.cn/images/wechat.jpeg",
+                    "type": "wechat"
+                }
             ],
             "time": "2023-08-16T07:01:47+00:00"
         },
@@ -985,9 +1084,14 @@
         {
             "name": "jiannei/laravel-response",
             "version": "v5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jiannei/laravel-response.git",
+                "reference": "f995c3ed58904dd02bb6b0d939521be2fcc0b468"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/jiannei/laravel-response/v5.2.0/jiannei-laravel-response-v5.2.0.zip",
+                "url": "https://api.github.com/repos/jiannei/laravel-response/zipball/f995c3ed58904dd02bb6b0d939521be2fcc0b468",
                 "reference": "f995c3ed58904dd02bb6b0d939521be2fcc0b468",
                 "shasum": ""
             },
@@ -1017,6 +1121,7 @@
                     "Jiannei\\Response\\Laravel\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1027,7 +1132,232 @@
                 }
             ],
             "description": "Laravel api response data format.",
+            "support": {
+                "issues": "https://github.com/jiannei/laravel-response/issues",
+                "source": "https://github.com/jiannei/laravel-response/tree/v5.2.0"
+            },
             "time": "2023-02-15T01:40:02+00:00"
+        },
+        {
+            "name": "kbdxbt/kbframe-common",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kbdxbt/kbframe-common.git",
+                "reference": "11c0c04b976df3dbfc475e516ee97c51c1aac3cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kbdxbt/kbframe-common/zipball/11c0c04b976df3dbfc475e516ee97c51c1aac3cc",
+                "reference": "11c0c04b976df3dbfc475e516ee97c51c1aac3cc",
+                "shasum": ""
+            },
+            "require": {
+                "guanguans/laravel-exception-notify": "^2.16",
+                "kbdxbt/kbframe-core": "v1.0.1",
+                "laravel/framework": "^10.17",
+                "milwad/laravel-validate": "^1.7",
+                "nwidart/laravel-modules": "^10.0",
+                "php": "^8.1",
+                "rakutentech/laravel-request-docs": "^2.23"
+            },
+            "require-dev": {
+                "brainmaestro/composer-git-hooks": "v3.0.0-alpha.1",
+                "friendsofphp/php-cs-fixer": "^3.22.0",
+                "laravel/legacy-factories": "^1.3",
+                "laravel/pint": "^1.13",
+                "orchestra/testbench": "^5.0 || ^6.0 || ^7.0 || ^8.0",
+                "pestphp/pest": "^1.23 || ^2.0",
+                "pestphp/pest-plugin-laravel": "^1.2 || ^2.0",
+                "phpunit/phpunit": "^9.5.21 || ^10"
+            },
+            "type": "library",
+            "extra": {
+                "hooks": {
+                    "pre-commit": [
+                        "composer checks"
+                    ],
+                    "pre-push": [
+                        "composer test"
+                    ]
+                },
+                "laravel": {
+                    "providers": [],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "files": [
+                    "helpers.php"
+                ],
+                "psr-4": {
+                    "Modules\\Common\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "kbdxbt",
+                    "email": "1194174530@qq.com"
+                }
+            ],
+            "description": "kbframe common module",
+            "keywords": [
+                "common",
+                "kbframe",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/kbdxbt/kbframe-common/issues",
+                "source": "https://github.com/kbdxbt/kbframe-common/tree/v1.1.0"
+            },
+            "time": "2023-09-25T03:26:36+00:00"
+        },
+        {
+            "name": "kbdxbt/kbframe-core",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kbdxbt/kbframe-core.git",
+                "reference": "1e37471c4834037adeed209b4512f7062a3057b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kbdxbt/kbframe-core/zipball/1e37471c4834037adeed209b4512f7062a3057b4",
+                "reference": "1e37471c4834037adeed209b4512f7062a3057b4",
+                "shasum": ""
+            },
+            "require": {
+                "guanguans/laravel-exception-notify": "^2.16",
+                "jiannei/laravel-response": "^5.2",
+                "laravel/framework": "^10.10",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "brainmaestro/composer-git-hooks": "v3.0.0-alpha.1",
+                "friendsofphp/php-cs-fixer": "^3.22.0",
+                "laravel/legacy-factories": "^1.3",
+                "laravel/pint": "^1.13",
+                "orchestra/testbench": "^5.0 || ^6.0 || ^7.0 || ^8.0",
+                "pestphp/pest": "^1.23 || ^2.0",
+                "pestphp/pest-plugin-laravel": "^1.2 || ^2.0",
+                "phpunit/phpunit": "^9.5.21 || ^10"
+            },
+            "type": "library",
+            "extra": {
+                "hooks": {
+                    "pre-commit": [
+                        "composer checks"
+                    ],
+                    "pre-push": [
+                        "composer test"
+                    ]
+                },
+                "laravel": {
+                    "providers": [],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "files": [],
+                "psr-4": {
+                    "Modules\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "kbdxbt",
+                    "email": "1194174530@qq.com"
+                }
+            ],
+            "description": "kbframe core module",
+            "keywords": [
+                "core",
+                "kbframe",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/kbdxbt/kbframe-core/issues",
+                "source": "https://github.com/kbdxbt/kbframe-core/tree/v1.0.1"
+            },
+            "time": "2023-09-19T10:30:32+00:00"
+        },
+        {
+            "name": "kitloong/laravel-app-logger",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kitloong/laravel-app-logger.git",
+                "reference": "9f62604dacc1f185ae76ddc5d2488d030792f639"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kitloong/laravel-app-logger/zipball/9f62604dacc1f185ae76ddc5d2488d030792f639",
+                "reference": "9f62604dacc1f185ae76ddc5d2488d030792f639",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/support": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0",
+                "php": ">=7.1.3",
+                "spatie/laravel-http-logger": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.17|^3.0",
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^3.8|^4.0|^5.0|^6.0|^7.0|^8.0",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "KitLoong\\AppLogger\\AppLoggerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "KitLoong\\AppLogger\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kit Loong",
+                    "email": "kitloong1008@gmail.com"
+                }
+            ],
+            "description": "Laravel log for your application",
+            "homepage": "https://github.com/kitloong/laravel-app-logger",
+            "keywords": [
+                "laravel",
+                "log",
+                "performance",
+                "query",
+                "request"
+            ],
+            "support": {
+                "issues": "https://github.com/kitloong/laravel-app-logger/issues",
+                "source": "https://github.com/kitloong/laravel-app-logger/tree/v1.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.buymeacoffee.com/kitloong",
+                    "type": "custom"
+                }
+            ],
+            "time": "2023-02-18T15:35:34+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1719,6 +2049,83 @@
             "time": "2023-08-05T12:09:49+00:00"
         },
         {
+            "name": "milwad/laravel-validate",
+            "version": "v1.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/milwad-dev/laravel-validate.git",
+                "reference": "5fa402e5be9b98df421b5739cce3c966b8d7c2c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/milwad-dev/laravel-validate/zipball/5fa402e5be9b98df421b5739cce3c966b8d7c2c9",
+                "reference": "5fa402e5be9b98df421b5739cce3c966b8d7c2c9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "ext-ctype": "*",
+                "laravel/framework": "9.*|10.*",
+                "morilog/jalali": "3.*",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0|8.*",
+                "phpunit/phpunit": "^9.0",
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Milwad\\LaravelValidate\\LaravelValidateServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Milwad\\LaravelValidate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "milwad khosravi",
+                    "email": "milwad.dev@gmail.com",
+                    "homepage": "https://github.com/milwad-dev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Write rules easy & fast",
+            "homepage": "https://github.com/milwad-dev/laravel-validate",
+            "keywords": [
+                "framework",
+                "larave-validation",
+                "laravel",
+                "laravel package",
+                "laravel validate package",
+                "laravel-validate",
+                "milwad",
+                "regex",
+                "validate",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/milwad-dev/laravel-validate/issues",
+                "source": "https://github.com/milwad-dev/laravel-validate/tree/v1.7.2"
+            },
+            "funding": [
+                {
+                    "url": "https://payping.ir/@milwad-dev",
+                    "type": "custom"
+                }
+            ],
+            "time": "2023-08-07T10:23:42+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "3.4.0",
             "dist": {
@@ -1798,6 +2205,71 @@
                 "psr-3"
             ],
             "time": "2023-06-21T08:46:11+00:00"
+        },
+        {
+            "name": "morilog/jalali",
+            "version": "v3.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/morilog/jalali.git",
+                "reference": "1cefc646c1488c508cf08c46eca1fd80447aa75c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/morilog/jalali/zipball/1cefc646c1488c508cf08c46eca1fd80447aa75c",
+                "reference": "1cefc646c1488c508cf08c46eca1fd80447aa75c",
+                "shasum": ""
+            },
+            "require": {
+                "beberlei/assert": "3.*",
+                "nesbot/carbon": "^1.21 || ^2.0",
+                "php": "^7.0 | ^7.1 | ^7.2 | ^8.0 | ^8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Morilog\\Jalali\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Milad Rey",
+                    "email": "miladr@gmail.com"
+                },
+                {
+                    "name": "Morteza Parvini",
+                    "email": "m.parvini@outlook.com"
+                }
+            ],
+            "description": "This Package helps developers to easily work with Jalali (Shamsi or Iranian) dates in PHP applications, based on Jalali (Shamsi) DateTime class.",
+            "keywords": [
+                "Jalali",
+                "date",
+                "datetime",
+                "laravel",
+                "morilog"
+            ],
+            "support": {
+                "issues": "https://github.com/morilog/jalali/issues",
+                "source": "https://github.com/morilog/jalali/tree/v3.4.1"
+            },
+            "funding": [
+                {
+                    "url": "https://issuehunt.io/r/morilog",
+                    "type": "issuehunt"
+                }
+            ],
+            "time": "2023-03-22T22:34:01+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2195,9 +2667,14 @@
         {
             "name": "overtrue/http",
             "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/http.git",
+                "reference": "e6e4c2ff274b1050d681288495878ee8fd3f1209"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/overtrue/http/1.2.3/overtrue-http-1.2.3.zip",
+                "url": "https://api.github.com/repos/overtrue/http/zipball/e6e4c2ff274b1050d681288495878ee8fd3f1209",
                 "reference": "e6e4c2ff274b1050d681288495878ee8fd3f1209",
                 "shasum": ""
             },
@@ -2222,6 +2699,7 @@
                     "Overtrue\\Http\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2232,6 +2710,16 @@
                 }
             ],
             "description": "A simple http client wrapper.",
+            "support": {
+                "issues": "https://github.com/overtrue/http/issues",
+                "source": "https://github.com/overtrue/http/tree/1.2.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/overtrue",
+                    "type": "github"
+                }
+            ],
             "time": "2022-03-14T06:24:13+00:00"
         },
         {
@@ -2292,9 +2780,14 @@
         {
             "name": "psr/cache",
             "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/cache/3.0.0/psr-cache-3.0.0.zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
                 "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
                 "shasum": ""
             },
@@ -2312,6 +2805,7 @@
                     "Psr\\Cache\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2327,6 +2821,9 @@
                 "psr",
                 "psr-6"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/cache/tree/3.0.0"
+            },
             "time": "2021-02-03T23:26:27+00:00"
         },
         {
@@ -2743,6 +3240,79 @@
             "time": "2023-05-23T02:31:11+00:00"
         },
         {
+            "name": "rakutentech/laravel-request-docs",
+            "version": "v2.23",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rakutentech/laravel-request-docs.git",
+                "reference": "4f47d1d15733593a2b84a3fa3f6c1e4376afbb2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rakutentech/laravel-request-docs/zipball/4f47d1d15733593a2b84a3fa3f6c1e4376afbb2e",
+                "reference": "4f47d1d15733593a2b84a3fa3f6c1e4376afbb2e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^8.37|^9.0|^10.0",
+                "kitloong/laravel-app-logger": "^1.0",
+                "php": "^7.4|^8.0|^8.1|^8.2",
+                "spatie/laravel-package-tools": "^1.4.3"
+            },
+            "require-dev": {
+                "barryvdh/laravel-ide-helper": "^2.12|dev-master",
+                "brianium/paratest": "^6.2",
+                "friendsofphp/php-cs-fixer": "^3.5",
+                "nunomaduro/collision": "^5.3|^6.0",
+                "nunomaduro/larastan": "^1.0|^2.4",
+                "orchestra/testbench": "^6.15|^7.0|^8.0",
+                "phpunit/phpunit": "^9.3",
+                "spatie/laravel-ray": "^1.23",
+                "squizlabs/php_codesniffer": "^3.6",
+                "vimeo/psalm": "^4.8|^5.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rakutentech\\LaravelRequestDocs\\LaravelRequestDocsServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelRequestDocs": "Rakutentech\\LaravelRequestDocs\\LaravelRequestDocsFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rakutentech\\LaravelRequestDocs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pulkit Kathuria",
+                    "email": "pulkit.kathuria@rakuten.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Automatically generate Laravel docs from request rules, controllers and routes",
+            "homepage": "https://github.com/rakutentech/laravel-request-docs",
+            "keywords": [
+                "laravel",
+                "laravel-request-docs",
+                "rakutentech"
+            ],
+            "support": {
+                "issues": "https://github.com/rakutentech/laravel-request-docs/issues",
+                "source": "https://github.com/rakutentech/laravel-request-docs/tree/v2.23"
+            },
+            "time": "2023-09-11T07:50:58+00:00"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "dist": {
@@ -2918,11 +3488,142 @@
             "time": "2023-04-15T23:01:58+00:00"
         },
         {
-            "name": "symfony/cache",
-            "version": "v6.3.4",
+            "name": "spatie/laravel-http-logger",
+            "version": "1.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-http-logger.git",
+                "reference": "28b10af8e17baeb114bdc9385b2badf363378c08"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/cache/v6.3.4/symfony-cache-v6.3.4.zip",
+                "url": "https://api.github.com/repos/spatie/laravel-http-logger/zipball/28b10af8e17baeb114bdc9385b2badf363378c08",
+                "reference": "28b10af8e17baeb114bdc9385b2badf363378c08",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0|^9.0|^10.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0|^7.0|^8.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\HttpLogger\\HttpLoggerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\HttpLogger\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brent Roose",
+                    "email": "brent@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel package to log HTTP requests",
+            "homepage": "https://github.com/spatie/laravel-http-logger",
+            "keywords": [
+                "laravel-http-logger",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-http-logger/issues",
+                "source": "https://github.com/spatie/laravel-http-logger/tree/1.10.2"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2023-07-24T15:41:14+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.16.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "cc7c991555a37f9fa6b814aa03af73f88026a83d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/cc7c991555a37f9fa6b814aa03af73f88026a83d",
+                "reference": "cc7c991555a37f9fa6b814aa03af73f88026a83d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5.24",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.16.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-08-23T09:04:39+00:00"
+        },
+        {
+            "name": "symfony/cache",
+            "version": "v6.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/cache.git",
+                "reference": "e60d00b4f633efa4c1ef54e77c12762d9073e7b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/e60d00b4f633efa4c1ef54e77c12762d9073e7b3",
                 "reference": "e60d00b4f633efa4c1ef54e77c12762d9073e7b3",
                 "shasum": ""
             },
@@ -2969,6 +3670,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2988,14 +3690,36 @@
                 "caching",
                 "psr6"
             ],
+            "support": {
+                "source": "https://github.com/symfony/cache/tree/v6.3.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2023-08-05T09:10:27+00:00"
         },
         {
             "name": "symfony/cache-contracts",
             "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/cache-contracts.git",
+                "reference": "ad945640ccc0ae6e208bcea7d7de4b39b569896b"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/cache-contracts/v3.3.0/symfony-cache-contracts-v3.3.0.zip",
+                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/ad945640ccc0ae6e208bcea7d7de4b39b569896b",
                 "reference": "ad945640ccc0ae6e208bcea7d7de4b39b569896b",
                 "shasum": ""
             },
@@ -3018,6 +3742,7 @@
                     "Symfony\\Contracts\\Cache\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3040,6 +3765,23 @@
                 "interfaces",
                 "interoperability",
                 "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/cache-contracts/tree/v3.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2023-05-23T14:45:45+00:00"
         },
@@ -4276,9 +5018,14 @@
         {
             "name": "symfony/rate-limiter",
             "version": "v6.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/rate-limiter.git",
+                "reference": "5223387e4017f26c8c61c46d8e39c11fe4d504b7"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/rate-limiter/v6.3.2/symfony-rate-limiter-v6.3.2.zip",
+                "url": "https://api.github.com/repos/symfony/rate-limiter/zipball/5223387e4017f26c8c61c46d8e39c11fe4d504b7",
                 "reference": "5223387e4017f26c8c61c46d8e39c11fe4d504b7",
                 "shasum": ""
             },
@@ -4299,6 +5046,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4317,6 +5065,23 @@
             "keywords": [
                 "limiter",
                 "rate-limiter"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/rate-limiter/tree/v6.3.2"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2023-07-13T14:29:38+00:00"
         },
@@ -4744,9 +5509,14 @@
         {
             "name": "symfony/var-exporter",
             "version": "v6.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-exporter.git",
+                "reference": "df1f8aac5751871b83d30bf3e2c355770f8f0691"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/var-exporter/v6.3.4/symfony-var-exporter-v6.3.4.zip",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/df1f8aac5751871b83d30bf3e2c355770f8f0691",
                 "reference": "df1f8aac5751871b83d30bf3e2c355770f8f0691",
                 "shasum": ""
             },
@@ -4765,6 +5535,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4789,6 +5560,23 @@
                 "lazy-loading",
                 "proxy",
                 "serialize"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/var-exporter/tree/v6.3.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2023-08-16T18:14:47+00:00"
         },
@@ -4991,6 +5779,70 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "barryvdh/laravel-debugbar",
+            "version": "v3.9.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/barryvdh/laravel-debugbar/v3.9.2/barryvdh-laravel-debugbar-v3.9.2.zip",
+                "reference": "bfd0131c146973cab164e50f5cdd8a67cc60cab1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/routing": "^9|^10",
+                "illuminate/session": "^9|^10",
+                "illuminate/support": "^9|^10",
+                "maximebf/debugbar": "^1.18.2",
+                "php": "^8.0",
+                "symfony/finder": "^6"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench-dusk": "^5|^6|^7|^8",
+                "phpunit/phpunit": "^8.5.30|^9.0",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.8-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\Debugbar\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Debugbar": "Barryvdh\\Debugbar\\Facades\\Debugbar"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Barryvdh\\Debugbar\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "PHP Debugbar integration for Laravel",
+            "keywords": [
+                "debug",
+                "debugbar",
+                "laravel",
+                "profiler",
+                "webprofiler"
+            ],
+            "time": "2023-08-25T18:43:57+00:00"
+        },
         {
             "name": "brainmaestro/composer-git-hooks",
             "version": "v3.0.0-alpha.1",
@@ -5197,6 +6049,32 @@
                 "performance"
             ],
             "time": "2022-02-25T21:32:43+00:00"
+        },
+        {
+            "name": "deployer/deployer",
+            "version": "v7.3.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/deployer/deployer/v7.3.1/deployer-deployer-v7.3.1.zip",
+                "reference": "c5c5e79d4e57445918ed24a9cdd3d85b0f261de3",
+                "shasum": ""
+            },
+            "bin": [
+                "dep"
+            ],
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Medvedev",
+                    "email": "anton@medv.io"
+                }
+            ],
+            "description": "Deployment Tool",
+            "homepage": "https://deployer.org",
+            "time": "2023-04-05T09:24:30+00:00"
         },
         {
             "name": "fakerphp/faker",
@@ -5417,6 +6295,221 @@
             "time": "2023-09-17T14:37:54+00:00"
         },
         {
+            "name": "guanguans/laravel-soar",
+            "version": "3.8.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/guanguans/laravel-soar/3.8.3/guanguans-laravel-soar-3.8.3.zip",
+                "reference": "6ad2497293798bd8ebd42fec3b0991e4bc1a7880",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "guanguans/soar-php": "^3.4",
+                "illuminate/contracts": "^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "illuminate/support": "^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "maximebf/debugbar": "^1.18",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "barryvdh/laravel-debugbar": "^3.7",
+                "brainmaestro/composer-git-hooks": "^2.8 || ^3.0",
+                "ergebnis/composer-normalize": "^2.28",
+                "friendsofphp/php-cs-fixer": "^3.14",
+                "guanguans/ai-commit": "^1.8",
+                "guanguans/monorepo-builder-worker": "^1.2",
+                "itsgoingd/clockwork": "^5.1",
+                "kubawerlos/php-cs-fixer-custom-fixers": "^3.13",
+                "laravel/legacy-factories": "^1.3",
+                "laravel/lumen-framework": "^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "mockery/mockery": "^1.6",
+                "orchestra/testbench": "^5.0 || ^6.0 || ^7.0 || ^8.0",
+                "pestphp/pest": "^1.23 || ^2.0",
+                "pestphp/pest-plugin-faker": "^1.0 || ^2.0",
+                "pestphp/pest-plugin-laravel": "^1.2 || ^2.0",
+                "php-mock/php-mock-phpunit": "^2.7",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "rector/rector": "^0.18",
+                "spatie/pest-plugin-snapshots": "^1.1 || ^2.0",
+                "spatie/ray": "^1.37",
+                "vimeo/psalm": "^5.15"
+            },
+            "suggest": {
+                "barryvdh/laravel-debugbar": "Output SQL scores to Laravel DebugBar.",
+                "itsgoingd/clockwork": "Output SQL scores to Clockwork.",
+                "laradumps/laradumps": "Output SQL scores to Laradumps.",
+                "spatie/ray": "Output SQL scores to Spatie Ray."
+            },
+            "type": "laravel",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": true,
+                    "target-directory": "vendor-bin"
+                },
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                },
+                "hooks": {
+                    "post-merge": [
+                        "composer checks"
+                    ],
+                    "pre-commit": [
+                        "composer checks"
+                    ]
+                },
+                "laravel": {
+                    "aliases": {
+                        "Soar": "Guanguans\\LaravelSoar\\Facades\\Soar"
+                    },
+                    "providers": [
+                        "Guanguans\\LaravelSoar\\SoarServiceProvider"
+                    ]
+                },
+                "phpstan": {
+                    "includes": []
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Support/helpers.php"
+                ],
+                "psr-4": {
+                    "Guanguans\\LaravelSoar\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "guanguans",
+                    "email": "ityaozm@gmail.com"
+                }
+            ],
+            "description": "SQL optimizer and rewriter for laravel. - laravel 的 SQL 优化器和重写器。",
+            "keywords": [
+                "Clockwork",
+                "console",
+                "debug",
+                "debugbar",
+                "dump",
+                "errorlog",
+                "laravel",
+                "log",
+                "mysql",
+                "optimize",
+                "optimizer",
+                "ray",
+                "rewrite",
+                "rewriter",
+                "soar",
+                "sql",
+                "statement",
+                "syslog",
+                "优化器",
+                "重写器"
+            ],
+            "time": "2023-08-30T09:00:39+00:00"
+        },
+        {
+            "name": "guanguans/soar-php",
+            "version": "3.4.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/guanguans/soar-php/3.4.4/guanguans-soar-php-3.4.4.zip",
+                "reference": "40e6385542ab8461ec4d2a16bc45e61506242219",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=7.2",
+                "symfony/process": "^5.4 || ^6.0"
+            },
+            "require-dev": {
+                "brainmaestro/composer-git-hooks": "^2.8 || ^3.0",
+                "composer/composer": "^2.6",
+                "dms/phpunit-arraysubset-asserts": "^0.5",
+                "ergebnis/composer-normalize": "^2.19",
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "jetbrains/phpstorm-attributes": "^1.0",
+                "johnkary/phpunit-speedtrap": "^4.0",
+                "mockery/mockery": "^1.3",
+                "php-mock/php-mock-phpunit": "^2.7",
+                "phpbench/phpbench": "^1.1",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "phpunit/phpunit": "^8.5 || ^9.0 || ^10.0",
+                "rector/rector": "^0.18",
+                "roave/security-advisories": "dev-latest",
+                "spatie/phpunit-snapshot-assertions": "^3.0 || ^4.0",
+                "symfony/var-dumper": "^5.4 || ^6.0",
+                "vimeo/psalm": "^4.30 || ^5.0"
+            },
+            "bin": [
+                "bin/soar.darwin-amd64",
+                "bin/soar.darwin-arm64",
+                "bin/soar.linux-amd64",
+                "bin/soar.linux-arm64",
+                "bin/soar.windows-amd64"
+            ],
+            "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": true,
+                    "target-directory": "vendor-bin"
+                },
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                },
+                "hooks": {
+                    "post-merge": [
+                        "composer checks"
+                    ],
+                    "pre-commit": [
+                        "composer checks"
+                    ]
+                },
+                "phpstan": {
+                    "includes": []
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Support/helpers.php"
+                ],
+                "psr-4": {
+                    "Guanguans\\SoarPHP\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "guanguans",
+                    "email": "ityaozm@gmail.com"
+                }
+            ],
+            "description": "SQL optimizer and rewriter. - SQL 优化器、重写器。",
+            "keywords": [
+                "debug",
+                "mysql",
+                "optimizer",
+                "rewriter",
+                "soar",
+                "sql",
+                "sql optimizer",
+                "sql rewriter"
+            ],
+            "time": "2023-09-15T14:34:02+00:00"
+        },
+        {
             "name": "hamcrest/hamcrest-php",
             "version": "v2.0.1",
             "source": {
@@ -5597,6 +6690,62 @@
                 "source": "https://github.com/laravel/sail"
             },
             "time": "2023-06-16T21:20:12+00:00"
+        },
+        {
+            "name": "maximebf/debugbar",
+            "version": "v1.19.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/maximebf/debugbar/v1.19.0/maximebf-debugbar-v1.19.0.zip",
+                "reference": "30f65f18f7ac086255a77a079f8e0dcdd35e828e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1|^8",
+                "psr/log": "^1|^2|^3",
+                "symfony/var-dumper": "^4|^5|^6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=7.5.20 <10.0",
+                "twig/twig": "^1.38|^2.7|^3.0"
+            },
+            "suggest": {
+                "kriswallsmith/assetic": "The best way to manage assets",
+                "monolog/monolog": "Log using Monolog",
+                "predis/predis": "Redis storage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DebugBar\\": "src/DebugBar/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxime Bouroumeau-Fuseau",
+                    "email": "maxime.bouroumeau@gmail.com",
+                    "homepage": "http://maximebf.com"
+                },
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Debug bar in the browser for php application",
+            "homepage": "https://github.com/maximebf/php-debugbar",
+            "keywords": [
+                "debug",
+                "debugbar"
+            ],
+            "time": "2023-09-19T19:53:10+00:00"
         },
         {
             "name": "mockery/mockery",
