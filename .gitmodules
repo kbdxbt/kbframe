@@ -1,0 +1,6 @@
+[submodule "Modules/Member"]
+	path = Modules/Member
+	url = git@github.com:kbdxbt/kbframe-member.git
+[submodule "Modules/PlatformGateway"]
+	path = Modules/PlatformGateway
+	url = git@github.com:kbdxbt/kbframe-platform-gateway.git

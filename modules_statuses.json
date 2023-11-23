@@ -1,4 +1,6 @@
 {
     "Core": true,
-    "Common": true
+    "Common": true,
+    "Member": true,
+    "PlatformGateway": true
 }
