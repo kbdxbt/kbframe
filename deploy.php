@@ -24,7 +24,7 @@ add('shared_dirs', []);
 add('writable_dirs', []);
 
 // 根据操作系统设置 ssh_multiplexing
-if (stripos(php_uname('s'), 'Windows') !== false) {
+if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
     // 在 Windows 下禁用 ssh_multiplexing
     set('ssh_multiplexing', false);
 
