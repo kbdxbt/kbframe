@@ -4,3 +4,9 @@
 [submodule "Modules/PlatformGateway"]
 	path = Modules/PlatformGateway
 	url = git@github.com:kbdxbt/kbframe-platform-gateway.git
+[submodule "Modules/Core"]
+	path = Modules/Core
+	url = git@github.com:kbdxbt/kbframe-core.git
+[submodule "Modules/Common"]
+	path = Modules/Common
+	url = git@github.com:kbdxbt/kbframe-common.git

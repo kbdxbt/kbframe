@@ -15,7 +15,8 @@
         "laravel/tinker": "^2.8",
         "opcodesio/log-viewer": "^3.1",
         "nwidart/laravel-modules": "^10.0",
-        "php-open-source-saver/jwt-auth": "^2.1"
+        "php-open-source-saver/jwt-auth": "^2.1",
+        "pragmarx/firewall": "^2.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9.2",
