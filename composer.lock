@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a40985f72232d49a2eed85a4c16b0fc",
+    "content-hash": "bd984a6a67c190c34d816066e761cbeb",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -1387,16 +1387,11 @@
         },
         {
             "name": "kbdxbt/kbframe-common",
-            "version": "v1.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kbdxbt/kbframe-common.git",
-                "reference": "9fb4594a1247a4e1e4c703749afad731224e6808"
-            },
+            "version": "v1.2.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kbdxbt/kbframe-common/zipball/9fb4594a1247a4e1e4c703749afad731224e6808",
-                "reference": "9fb4594a1247a4e1e4c703749afad731224e6808",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/kbdxbt/kbframe-common/v1.2.4/kbdxbt-kbframe-common-v1.2.4.zip",
+                "reference": "5902e239813111fc4d6c0765fb6998b60d9fc6c4",
                 "shasum": ""
             },
             "require": {
@@ -1443,7 +1438,6 @@
                     "Modules\\Common\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1459,11 +1453,7 @@
                 "kbframe",
                 "laravel"
             ],
-            "support": {
-                "issues": "https://github.com/kbdxbt/kbframe-common/issues",
-                "source": "https://github.com/kbdxbt/kbframe-common/tree/v1.2.3"
-            },
-            "time": "2023-11-24T06:08:49+00:00"
+            "time": "2023-12-18T03:20:37+00:00"
         },
         {
             "name": "kbdxbt/kbframe-core",
