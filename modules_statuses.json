@@ -2,5 +2,6 @@
     "Core": true,
     "Common": true,
     "Member": true,
-    "PlatformGateway": true
+    "PlatformGateway": true,
+    "Publish": true
 }
