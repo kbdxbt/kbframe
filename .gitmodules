@@ -7,9 +7,6 @@
 [submodule "Modules/Core"]
 	path = Modules/Core
 	url = git@github.com:kbdxbt/kbframe-core.git
-[submodule "Modules/Common"]
-	path = Modules/Common
-	url = git@github.com:kbdxbt/kbframe-common.git
 [submodule "Modules/Publish"]
 	path = Modules/Publish
 	url = git@github.com:kbdxbt/kbframe-publish.git

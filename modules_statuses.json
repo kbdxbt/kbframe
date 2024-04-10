@@ -1,6 +1,5 @@
 {
     "Core": true,
-    "Common": true,
     "Member": true,
     "PlatformGateway": true,
     "Publish": true
