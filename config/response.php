@@ -3,7 +3,7 @@
 /*
  * This file is part of the jiannei/laravel-response.
  *
- * (c) Jiannei <longjian.huang@foxmail.com>
+ * (c) Jiannei <jiannei@sinan.fun>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
@@ -24,23 +24,15 @@ return [
 
     'error_code' => 200,
 
-    // You can use enumerations to define the code when the response is returned,
-    // and set the response message according to the locale
-    //
-    // The following two enumeration packages are good choices
-    //
-    // https://github.com/Jiannei/laravel-enum
-    // https://github.com/BenSampo/laravel-enum
-
-    'enum' => \Modules\Common\Enums\HttpStatusCodeEnum::class,
+    // lang/zh_CN/enums.php
+    'locale' => 'enums', // enums.\Jiannei\Enum\Laravel\Support\Enums\HttpStatusCode::class
 
     //  You can set some attributes (eg:code/message/header/options) for the exception, and it will override the default attributes of the exception
     'exception' => [
-        \Illuminate\Validation\ValidationException::class => [
-            'code' => 422,
-        ],
+//        \Illuminate\Validation\ValidationException::class => [
+//            'code' => 422,
+//        ],
         \Illuminate\Auth\AuthenticationException::class => [
-
         ],
         \Symfony\Component\HttpKernel\Exception\NotFoundHttpException::class => [
             'message' => '',
@@ -50,52 +42,17 @@ return [
         ],
     ],
 
-    // Set the structure of the response data
+    // Any key that returns data exists supports custom aliases and display.
     'format' => [
-        Modules\Core\Support\ResponseFormat::class,
-        [
+        'class' => \Jiannei\Response\Laravel\Support\Format::class,
+        'config' => [
+            // key => config
             'status' => ['alias' => 'status', 'show' => true],
             'code' => ['alias' => 'code', 'show' => true],
             'message' => ['alias' => 'message', 'show' => true],
             'error' => ['alias' => 'error', 'show' => true],
-            'data' => [
-                'alias' => 'data',
-                'show' => true,
-
-                'fields' => [
-                    // When data is nested with data, such as returning paged data, you can also set an alias for the inner data
-                    'data' => ['alias' => 'data', 'show' => true], // data/rows/list
-
-                    'meta' => [
-                        'alias' => 'meta',
-                        'show' => true,
-
-                        'fields' => [
-                            'pagination' => [
-                                'alias' => 'pagination',
-                                'show' => true,
-
-                                'fields' => [
-                                    'total' => ['alias' => 'total', 'show' => true],
-                                    'count' => ['alias' => 'count', 'show' => true],
-                                    'per_page' => ['alias' => 'per_page', 'show' => true],
-                                    'current_page' => ['alias' => 'current_page', 'show' => true],
-                                    'total_pages' => ['alias' => 'total_pages', 'show' => true],
-                                    'links' => [
-                                        'alias' => 'links',
-                                        'show' => true,
-
-                                        'fields' => [
-                                            'previous' => ['alias' => 'previous', 'show' => true],
-                                            'next' => ['alias' => 'next', 'show' => true],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-            ],
+            'data' => ['alias' => 'data', 'show' => true],
+            'data.data' => ['alias' => 'data.data', 'show' => true], // rows/items/list
         ],
     ],
 ];

@@ -201,7 +201,7 @@ return [
     'scan' => [
         'enabled' => true,
         'paths' => [
-                base_path('vendor/kbdxbt/*'),
+//                base_path('vendor/kbdxbt/*'),
         ],
     ],
     /*

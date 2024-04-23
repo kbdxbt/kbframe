@@ -60,6 +60,8 @@ return [
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+//                PDO::ATTR_PERSISTENT => true, // 开启持久化连接
+//                PDO::ATTR_TIMEOUT => 10, // 连接超时时间（秒）
             ]) : [],
         ],
 
