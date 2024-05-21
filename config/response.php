@@ -22,7 +22,7 @@ return [
     | 500, All failed responses return a 500 status code
     */
 
-    'error_code' => 200,
+    'error_code' => '200',
 
     // lang/zh_CN/enums.php
     'locale' => 'enums', // enums.\Jiannei\Enum\Laravel\Support\Enums\HttpStatusCode::class
@@ -44,7 +44,7 @@ return [
 
     // Any key that returns data exists supports custom aliases and display.
     'format' => [
-        'class' => \Jiannei\Response\Laravel\Support\Format::class,
+        'class' => \Modules\Core\Support\ResponseFormat::class,
         'config' => [
             // key => config
             'status' => ['alias' => 'status', 'show' => true],
