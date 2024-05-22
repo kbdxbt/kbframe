@@ -1,12 +1,12 @@
 [submodule "Modules/Member"]
 	path = Modules/Member
-	url = git@github.com:kbdxbt/kbframe-member.git
+	url = https://github.com/kbdxbt/kbframe-member
 [submodule "Modules/PlatformGateway"]
 	path = Modules/PlatformGateway
-	url = git@github.com:kbdxbt/kbframe-platform-gateway.git
+	url = https://github.com/kbdxbt/kbframe-platform-gateway
 [submodule "Modules/Core"]
 	path = Modules/Core
-	url = git@github.com:kbdxbt/kbframe-core.git
+	url = https://github.com/kbdxbt/kbframe-core
 [submodule "Modules/Publish"]
 	path = Modules/Publish
-	url = git@github.com:kbdxbt/kbframe-publish.git
+	url = https://github.com/kbdxbt/kbframe-publish
