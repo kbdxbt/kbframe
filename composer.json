@@ -28,7 +28,7 @@
         "deployer/deployer": "^7.3",
         "fakerphp/faker": "^1.9.1",
         "friendsofphp/php-cs-fixer": "^3.22.0",
-        "guanguans/laravel-soar": "v3.9",
+        "guanguans/laravel-soar": "v3.16.2",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
