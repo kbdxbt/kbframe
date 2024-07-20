@@ -6,3 +6,9 @@
 ```bash
 php artisan module:make 新模块简称
 ```
+
+
+修改子模块地址
+git submodule sync
+
+git submodule update --init --recursive
