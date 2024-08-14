@@ -1,0 +1,35 @@
+variables:
+  REMOTE_URL:
+  HOTFIX_BRANCH: hotfix
+  TEST_MERGE_BRANCH: test-merge
+  ACCESS_TOKEN:
+
+stages:
+  - merge
+
+test_merge:
+  stage: merge
+  script:
+    - git remote set-url origin $REMOTE_URL;
+    - |
+      if [[ $CI_COMMIT_REF_NAME =~ ^(develop|feature|patch).* ]]; then
+        TARGET_BRANCH=$TEST_MERGE_BRANCH;
+      elif [[ $CI_COMMIT_REF_NAME =~ ^release.* ]]; then
+        TARGET_BRANCH=$HOTFIX_BRANCH
+      else
+        echo "Error: Branch name does not match any known patterns."
+        exit 1
+      fi;
+    - git checkout $TARGET_BRANCH && git pull origin $TARGET_BRANCH && git reset --hard $TARGET_BRANCH;
+    - |
+      if [ -z "$(git diff --name-only origin/$CI_COMMIT_REF_NAME)" ]; then
+        echo "No changes detected. Skipping merge.";
+        exit 0
+      fi;
+    - git merge --no-commit --no-ff origin/$CI_COMMIT_REF_NAME;
+    - git commit -m "Merge branch '${CI_COMMIT_REF_NAME}' into '${TARGET_BRANCH}'";
+    - git push origin $TARGET_BRANCH;
+  #  after_script:
+  #    - 'curl -X POST "https://oapi.dingtalk.com/robot/send?access_token='${ACCESS_TOKEN}'" -H "Content-Type: application/json" -d "{\"msgtype\": \"text\", \"text\": {\"content\": \"'${TEST_MERGE_BRANCH}' conflicts occurred! Files:\n $(git diff --name-only --diff-filter=U)\"}}"'
+  only:
+    - /^(develop|feature|patch|release).*/
