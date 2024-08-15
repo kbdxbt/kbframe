@@ -7,7 +7,7 @@ variables:
 stages:
   - merge
 
-test_merge:
+branch_auto_merge:
   stage: merge
   script:
     - git remote set-url origin $REMOTE_URL;
