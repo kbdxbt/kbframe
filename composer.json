@@ -51,10 +51,6 @@
         }
     },
     "scripts": {
-        "post-install-cmd": [
-            "@cghooks add --ignore-lock",
-            "@cghooks update"
-        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -68,7 +64,6 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "cghooks": "@php ./vendor/bin/cghooks --ansi -v",
         "checks": [
             "@check-style"
         ],
