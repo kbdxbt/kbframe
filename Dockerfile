@@ -1,7 +1,7 @@
 FROM webdevops/php-nginx:8.2-alpine
 
 # 配置nginx
-COPY ./vhost.conf /opt/docker/etc/nginx/vhost.conf
+COPY ./docker/nginx/vhost.conf /opt/docker/etc/nginx/vhost.conf
 
 # php配置
 ENV PHP_MEMORY_LIMIT  '2048M'
