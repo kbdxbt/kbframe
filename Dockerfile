@@ -33,7 +33,7 @@ RUN set -ex;\
     if [[ ! -f "/app/.env" ]] && [[ -f "/app/.env.example" ]];\
     then\
        cp /app/.env.example /app/.env;\
-       php artisan app:key-generate;\
+       php artisan key:generate;\
        php artisan jwt:secret --force;\
     fi; \
 #    if [[ ! -f "/app/storage/configure/plus.yml" ]] && [[ -f "/app/storage/configure/plus.yml.example" ]];\
