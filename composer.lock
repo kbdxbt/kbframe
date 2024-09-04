@@ -3277,15 +3277,20 @@
         },
         {
             "name": "pragmarx/support",
-            "version": "v0.9.5",
+            "version": "v0.9.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antonioribeiro/support.git",
+                "reference": "c77c955eaecb7208841490e15bf5da458ba711be"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/pragmarx/support/v0.9.5/pragmarx-support-v0.9.5.zip",
-                "reference": "397ba74efb8a46a98766cc0b974818d8e89f9444",
+                "url": "https://api.github.com/repos/antonioribeiro/support/zipball/c77c955eaecb7208841490e15bf5da458ba711be",
+                "reference": "c77c955eaecb7208841490e15bf5da458ba711be",
                 "shasum": ""
             },
             "require": {
-                "illuminate/filesystem": "~4.0|~5.0|~6.0|~7.0|~8.0|~9.0|~10.0",
+                "illuminate/filesystem": "~4.0|~5.0|~6.0|~7.0|~8.0|~9.0|~10.0|~11.0",
                 "php": ">=5.4.0",
                 "symfony/var-dumper": "~2.6|~3.0|~4.0|~5.0|~6.0"
             },
@@ -3307,6 +3312,7 @@
                     "PragmaRX\\Support\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -3322,7 +3328,11 @@
                 "laravel",
                 "pragmarx"
             ],
-            "time": "2023-02-17T12:02:19+00:00"
+            "support": {
+                "issues": "https://github.com/antonioribeiro/support/issues",
+                "source": "https://github.com/antonioribeiro/support/tree/v0.9.6"
+            },
+            "time": "2024-05-20T08:10:28+00:00"
         },
         {
             "name": "psr/cache",
